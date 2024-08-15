@@ -56,6 +56,10 @@ dnstwist -u domain.name
 ```
 An additional thing the tool has is the ability to do fuzzy hashing to narrow down which domains you can priortize investigating. Fuzzy hashing is a concept that involves the ability to compare two inputs (HTML code) and determine a fundamental level of similarity, while perceptual hash is a fingerprint derived from visual features of an image (web page screenshot). The unique feature of detecting similar HTML source code can be enabled with --lsh argument. For each generated domain, dnstwist will fetch content from responding HTTP server (following possible redirects), normalize HTML code and compare its fuzzy hash with the one for the original (initial) domain. The level of similarity is expressed as a percentage. In cases when the effective URL is the same as for the original domain, the fuzzy hash is not calculated at all in order to reject false positive indications. 
 ```
-dnstwist --lsh tlsh domain.name
+dnstwist -r --lsh tlsh domain.name
 ```
-The results will show a percentage and ones with a high percentage are definitely ones you should investigate further. It doesnt mean you dont investgate the other results, but sometimes the amount of results is quite large and you may want to prioritize what to investigate first. 
+The results will show a percentage and ones with a high percentage are definitely ones you should investigate further. It doesnt mean you dont investgate the other results, but sometimes the amount of results is quite large and you may want to prioritize what to investigate first. Like Open Squat, there is a web version you can use as well that defaults to results of registered domains https://dnstwist.it/
+
+## Additional Links
+[Have I Been Squatted](https://www.haveibeensquatted.com/) This site will have you put in a domain name and it will check if it has been squatted. It gives some additional info if you sign up such as whois data. The results look similar to DNSTwist and Open Squat as far as permutations go. It is unique in that it uses something called Levenshtein distance to determine how close it is to the given domain name (the smaller the distance, the higher the similarity). The Levenshtein distance is a number that tells you how different two strings are. The higher the number, the more different the two strings are. For example, the Levenshtein distance between “kitten” and “sitting” is 3 since, at a minimum, 3 edits are required to change one into the other. It looks like this site uses a Rust permutation generator https://github.com/haveibeensquatted/twistrs
+
