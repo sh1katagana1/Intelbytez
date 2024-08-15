@@ -24,7 +24,7 @@ google
 #microsoft
 pepsi
 ```
-This is where you would add any keywords related to your company, domain, brand, etc. Open Squat will grab a list of the latest domains registered feed and try multiple permutations of the keywords in this file. It will then check these permutations against the list of domain names registered and if it sees a match it will list it with a confidence rating and you can investigate it further. 
+This is where you would add any keywords related to your company, domain, brand, etc. Open Squat will grab a list of the latest domains registered feed and try multiple permutations of the keywords in this file. It will then check these permutations against the list of domain names registered and if it sees a match it will list it with a confidence rating and you can investigate it further. \
 **Basic Usage**
 ```
 python3 opensquat.py -k keywords.txt
