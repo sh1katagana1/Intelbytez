@@ -33,4 +33,29 @@ This will run Open Squat using the keywords file. Keep in mind this does not hav
 ```
 python3 opensquat.py -p month -k keywords.txt
 ```
+This has always given me great results that were quite accurate. 
 
+## DNSTwist
+https://github.com/elceef/dnstwist
+
+***
+
+This is my second go to tool. This one only takes domain names for input, and also does permutations of the supplied domain name. \
+**Install**
+```
+pip3 install dnstwist[full]
+```
+**Basic Usage** \
+This will run permutations of the domain name and check if any of these permutations are currently registered
+```
+dnstwist --registered domain.name
+```
+This will run permutations and check only for ones that are not currently registered. This is useful for your company to see what possible domains a threat actor may buy and buy them ahead of time instead, beating the threat actor to it. 
+```
+dnstwist -u domain.name
+```
+An additional thing the tool has is the ability to do fuzzy hashing to narrow down which domains you can priortize investigating. Fuzzy hashing is a concept that involves the ability to compare two inputs (HTML code) and determine a fundamental level of similarity, while perceptual hash is a fingerprint derived from visual features of an image (web page screenshot). The unique feature of detecting similar HTML source code can be enabled with --lsh argument. For each generated domain, dnstwist will fetch content from responding HTTP server (following possible redirects), normalize HTML code and compare its fuzzy hash with the one for the original (initial) domain. The level of similarity is expressed as a percentage. In cases when the effective URL is the same as for the original domain, the fuzzy hash is not calculated at all in order to reject false positive indications. 
+```
+dnstwist --lsh tlsh domain.name
+```
+The results will show a percentage and ones with a high percentage are definitely ones you should investigate further. It doesnt mean you dont investgate the other results, but sometimes the amount of results is quite large and you may want to prioritize what to investigate first. 
