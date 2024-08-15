@@ -31,6 +31,6 @@ python3 opensquat.py -k keywords.txt
 ```
 This will run Open Squat using the keywords file. Keep in mind this does not have to be the keywords.txt that comes with Open Squat, you can make your own, just pass in the correct name. When its finished running it will display a list of anything it finds. You can also go to the website https://opensquat.com/ to run a search on keywords, but it only uses the last 24 hours domain registered list. If you want to do a longer period of time, you have to use the command line tool.
 ```
-python83 opensquat.py -p month -k keywords.txt
+python3 opensquat.py -p month -k keywords.txt
 ```
 
