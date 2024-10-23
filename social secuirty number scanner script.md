@@ -61,7 +61,9 @@ python find_ssn.py
 4. Error Handling: The script handles the case where the specified file does not exist.
 
 This script will print out all social security numbers found in the specified text file.
---------------------------------
+
+***
+
 
 
 ## Modification Goal
