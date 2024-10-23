@@ -3,6 +3,4 @@
 
 ## Test 2
 
-https://www.dropbox.com/scl/fi/7vfdmhqkm0hlbgwoe5d08/A-Smugglers-Life-For-Me-Made-with-Clipchamp_1694698415547.mp4
-
-Press play
+[![](https://markdown-videos-api.jorgenkh.no/youtube/tBjhqXin6jo)](https://youtu.be/tBjhqXin6jo)
