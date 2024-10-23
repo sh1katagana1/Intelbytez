@@ -3,4 +3,4 @@
 
 ## Test 2
 
-[![](https://markdown-videos-api.jorgenkh.no/youtube/tBjhqXin6jo)](https://youtu.be/tBjhqXin6jo)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tBjhqXin6jo?si=Rvuh0yai9DJGBXCK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
