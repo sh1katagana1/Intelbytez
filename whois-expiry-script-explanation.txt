@@ -1,0 +1,101 @@
+# Whois Expiry Check
+
+***
+
+## Goal
+To create a bash script that takes in a text file list of domain names called domains.txt and looks up in whois to get the expiry date of each domain. Have the output put the domain name followed by the expiry date
+
+## Language
+bash
+
+## Script
+```
+#!/bin/bash
+
+# Check if domains.txt exists
+if [ ! -f domains.txt ]; then
+    echo "domains.txt not found!"
+    exit 1
+fi
+
+while read -r domain; do
+    # Skip empty lines
+    [ -z "$domain" ] && continue
+
+    # Run whois and extract expiration date
+    expiry=$(whois "$domain" 2>/dev/null | \
+        grep -iE 'Expiry Date:|Expiration Date:|paid-till:|expires:' | \
+        head -n 1 | \
+        awk -F: '{print $2}' | xargs)
+
+    # Output domain and expiry date
+    echo "$domain $expiry"
+done < domains.txt
+```
+
+## How it works
+1. Reads each domain from domains.txt
+2. Runs whois for each domain
+3. Searches for lines containing common expiry date fields (Expiry Date:, Expiration Date:, paid-till:, expires:)
+4. Outputs the domain name followed by the expiry date
+
+## Usage
+1. Save the script to a file, for example get_expiry.sh.
+2. Make it executable:
+```
+chmod +x get_expiry.sh
+```
+3. Run the script:
+```
+./get_expiry.sh
+```
+## Notes:
+1. The script assumes domains.txt contains one domain per line.
+2. Some TLDs may use different field names or formats, so you may need to adjust the grep patterns for your specific needs
+
+For a more robust solution with support for many TLDs, consider using an existing tool such as domain-check-2.sh
+
+## Modification
+Modify the script to output to CSV format with the first column being the domain name and the second column being the expiry date
+
+## Script
+```
+#!/bin/bash
+
+INPUT="domains.txt"
+OUTPUT="domain_expiry.csv"
+
+# Write CSV header
+echo "Domain,Expiry Date" > "$OUTPUT"
+
+while read -r domain; do
+    [ -z "$domain" ] && continue
+
+    expiry=$(whois "$domain" 2>/dev/null | \
+        grep -iE 'Expiry Date:|Expiration Date:|paid-till:|expires:' | \
+        head -n 1 | \
+        awk -F: '{print $2}' | xargs)
+
+    echo "$domain,$expiry" >> "$OUTPUT"
+done < "$INPUT"
+```
+
+## How to use:
+1. Save as get_expiry_csv.sh
+2. Make executable: chmod +x get_expiry_csv.sh
+3. Run: ./get_expiry_csv.sh
+4. Open domain_expiry.csv in Excel; columns will be properly separated
+
+
+To convert to XLSX:
+```
+libreoffice --headless --convert-to xlsx domain_expiry.csv
+```
+or
+
+```
+ssconvert domain_expiry.csv domain_expiry.xlsx
+```
+(both require the respective tools to be installed)
+
+
