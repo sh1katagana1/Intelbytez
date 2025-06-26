@@ -65,7 +65,9 @@ This script does the following:
 
 ## Usage
 To use this script:
-
+```
+pip3 install requests pandas openpyxl
+```
 1. Install the required libraries: pip install requests pandas openpyxl
 2. Create a text file named 'domains.txt' with one domain name per line.
 3. Run the script. It will process the domains and create an Excel file with the certificate details.
