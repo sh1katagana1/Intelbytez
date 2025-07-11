@@ -72,3 +72,12 @@ python typosquat_check.py domains.txt newly_registered_domains.txt
 1. This script uses dnstwist to generate typosquatting permutations. 
 2. It checks each permutation against the set of newly registered domains from the last 24 hours
 3. Alternative tools for permutation generation include ail-typo-squatting, which can be substituted for dnstwist if preferred.
+
+It seems that there is a couple of free feeds where some tools get their newly registered domains list, but the one I see the most is https://www.whoisds.com/newly-registered-domains Additionally, there is a phishing domain discovered list daily at https://github.com/Phishing-Database/Phishing.Database 
+
+This bash script will download and concatenate the past 7 days worth of NRD data rom whoisds: https://github.com/PeterDaveHello/nrd-list-downloader/blob/master/nrd-list-downloader.sh 
+
+Another source pulling from ICANN data is https://codeberg.org/webamon/newly_registered_domains
+
+An alternative that uses the DNSTwist algorithm is DNSRazzle https://github.com/f8al/DNSrazzle   This will do the permutations via the DNSTwist algorithm, then check if they are registered. It also does screenshots of ones it finds and a comparison check to the original website. It outputs to Excel so even though it pulls all data throughout the years, it does let you filter for things like year and month. It doesn't seem to be the most recent stuff but the past month is the latest it has. 
+
