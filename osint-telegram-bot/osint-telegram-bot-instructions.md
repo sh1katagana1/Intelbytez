@@ -2,6 +2,8 @@
 
 ***
 
+# https://t.me/shikataosint2026_bot
+
 ## Goal
 To make an OSINT bot in Telegram that will run tools I have in an Ubuntu VM, as well as online sources
 
