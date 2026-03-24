@@ -144,7 +144,7 @@ if __name__ == "__main__":
 
 Then run it:
 ```
-c:\Users\rconfer\Documents\solana-test>python3 solana-test.py
+c:\Users\ljenkins\Documents\solana-test>python3 solana-test.py
 ```
 It should look like:
 ```
