@@ -6,7 +6,7 @@
 When performing cyber threat intel duties, a big part of your job is reviewing security blogs for the latest threat intel and cybersecurity news. You could bookmark all of these sites in your browser and visit them daily, or utilize Telegram. Telegram is a messaging app that I like to repurpose for mostly Threat Intel and OSINT tasks and they have a feature called 'bots'. These allow you to automate things and control and view them via Telegram. Our goal here is to create a Telegram bot that lets you type in the word /fetch and get the last 10 articles from a number of RSS feeds of cybersecurity sites.
 
 ## Blogs
-There is a plethora of cybersecurity blogs, some with very focused purposes. Here is a list of some that I like to use:
+There is a plethora of cybersecurity blogs, some with very focused purposes. Here is a list of some that I like to use: \
 [GB Hackers](https://gbhackers.com/feed/) \
 [Bleeping Computer](https://www.bleepingcomputer.com/feed/) \
 [Cybersecurity News](https://cybersecuritynews.com/feed/) \
