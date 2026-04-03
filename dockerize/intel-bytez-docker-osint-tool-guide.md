@@ -193,24 +193,3 @@ When you start piling on the tools, you may move to something like Docker Compos
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-docker run --rm \
-  -v /root/osint-tools/sublist3r/output:/app/results \
-  sh1katagana1/sublist3r -d trinetcloud.com -o /app/results/found_subs.txt
