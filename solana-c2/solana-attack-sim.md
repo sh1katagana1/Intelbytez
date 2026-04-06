@@ -40,7 +40,7 @@ I am using windows 11. Let's start by installing the Solana CLI
 
 Run CMD as Admin
 ```
-curl https://release.anza.xyz/stable/solana-install-init-x86_64-pc-windows-msvc.exe --output C:\solana-install-tmp\solana-install-init.exe --create-dirs.
+curl https://release.anza.xyz/stable/solana-install-init-x86_64-pc-windows-msvc.exe --output C:\solana-install-tmp\solana-install-init.exe --create-dirs
 ```
 To install run: 
 ```
