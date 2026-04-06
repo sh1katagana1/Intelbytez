@@ -46,38 +46,58 @@ To install run:
 ```
 C:\solana-install-tmp\solana-install-init.exe v1.18.22
 ```
+![](solana1.png)
+
 Close the terminal and reopen as admin. Verify with: 
 ```
 solana --version
 ```
+![](solana2.png)
+
 Generate a new wallet
 ```
 solana-keygen new --outfile $HOME\my-test-wallet.json
 ```
+![](solana3.png)
+
 Set it as the default wallet
 ```
 solana config set --keypair $HOME\my-test-wallet.json
 ```
+![](solana4.png)
+
 Get your public address 
 ```
 solana address
 ```
+![](solana5.png)
+
 Configure solana to use devnet as it will give you free SOL for testing
 ```
 solana config set --url https://api.devnet.solana.com
 ```
+![](solana6.png)
+
 To airdrop some free SOL, go here: https://faucet.solana.com/  I found that it only works if you link your GitHub, so I did that, put my wallet address in and chose 2.5 for amount.
+
+![](solana7.png)
+![](solana8.png)
+![](solana9.png)
 
 Check your balance
 ```
 solana balance
 ```
+![](solana10.png)
+
 
 To test, ill do a print of the words, "this is a test" and also creating a file. For the command below I use a made up wallet, change that to your wallet. 
 
 ```
 solana transfer B8nfzR3suV5N2mLBUBtwtmxS1AHFGYjthqog1nFdefGE 0.001 --allow-unfunded-recipient --fee-payer $HOME\my-test-wallet.json --with-memo "PRINT_TEST" --url https://api.devnet.solana.com
 ```
+![](solana11.png)
+
 
 This should give you a signature, like Signature: Zri6PMXRgFwD3BQ9VhUu7pBa2Ly1x2nmzuZHSmeB1i8cM7MFN6VWctseq8KdpVzYUctqyMYm66vtMTZYGnUayHV3
 
@@ -141,18 +161,15 @@ def monitor_wallet():
 if __name__ == "__main__":
     monitor_wallet()
 ```
+![](solana12.png)
 
 Then run it:
 ```
 c:\Users\ljenkins\Documents\solana-test>python3 solana-test.py
 ```
 It should look like:
-```
-Monitoring B8nfzR3suV5N2mLBUBtwtmxS1AHFGYjthqog1nFdefGE for C2 instructions...
-New transaction detected: 5tu6PMXRgFwD3BQ9VhUu7pBa2Ly1x2nmzuZHSmeB1i8cM7MFN6VWctseq8KdpVzYUctqyMYm66vtMTZYGnUayHV3
-Action Triggered: this is a test
-File created at: C:\Users\ljenkins\c2_test_signal.txt
-```
+![](solana13.png)
+
 
 
 
