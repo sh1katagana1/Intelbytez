@@ -46,7 +46,7 @@ To install run:
 ```
 C:\solana-install-tmp\solana-install-init.exe v1.18.22
 ```
-Verify with: 
+Close the terminal and reopen as admin. Verify with: 
 ```
 solana --version
 ```
