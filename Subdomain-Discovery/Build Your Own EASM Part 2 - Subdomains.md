@@ -122,8 +122,6 @@ We can see above that it went from 37,619 to 1 (www.example.com) That is pretty 
 ## HTTPX
 If you get a list that has thousands of subdomains and you want to find out which ones actually have IPs associated with them, my favorite tool is Project Discovery HTTPX https://github.com/projectdiscovery/httpx The amount of options are staggering as seen by this help file:
 ```
-httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library.
-
 Usage:
   ./httpx [flags]
 
