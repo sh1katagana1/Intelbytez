@@ -103,7 +103,6 @@ subfinder -d example.com -all -o all-subdomains.txt
 ![](subfinder5.png)
 
 Here we see it found 37,619 subdomains for example.com:
-```
 ![](subfinder6.png)
 
 Now, it is highly likely not all of these exist currently, but did at one time. This is called Passive DNS. Passive DNS is a system that records DNS queries and responses as they happen across the internet. Instead of asking a specific server "What is the IP for api.example.com?", a passive DNS database collects results from sensors placed at various points, like Internet Service Providers (ISPs), large recursive resolvers (like Cloudflare or Google), and security researchers. 
@@ -120,7 +119,7 @@ subfinder -d example.com -all -nW -o all-subdomains2.txt
 We can see above that it went from 37,619 to 1 (www.example.com) That is pretty insane! Either way, we have now seen the power of Subfinder, and this was without adding any API Keys.
 
 ## HTTPX
-If you get a list that has thousands of subdomains and you want to find out which ones actually have IPs associated with them, my favorite tool is Project Discovery HTTPX https://github.com/projectdiscovery/httpx The amount of options are staggering as seen by this help file:
+If you get a list that has thousands of subdomains and you want to find out which ones actually have IPs associated with them, my favorite tool is Project Discovery HTTPX https://github.com/projectdiscovery/httpx The amount of options are staggering as seen by their help file.
 ```
 Usage:
   ./httpx [flags]
